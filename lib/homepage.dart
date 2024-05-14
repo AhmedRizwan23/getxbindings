@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/bindings.dart';
+import 'package:getx_tutorial/builderspage.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -25,10 +26,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListTile(
                   title: const Text("Get x Bindings"),
                   onTap: () {
-                    Get.to(() => Bindingspage());
+                    Get.to(() => const Bindingspage());
                   },
                 ),
-              )
+              ),
+              Card(
+                child: ListTile(
+                  title: const Text("Future and stream builder "),
+                  onTap: () {
+                    Get.to(() =>  Builderspage());
+                  },
+                ),
+              ),
             ],
           ),
         ],
