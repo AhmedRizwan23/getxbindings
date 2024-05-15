@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_tutorial/bindings.dart';
 import 'package:getx_tutorial/builderspage.dart';
+import 'package:getx_tutorial/streambuilder.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -34,7 +35,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListTile(
                   title: const Text("Future and stream builder "),
                   onTap: () {
-                    Get.to(() =>  Builderspage());
+                    Get.to(() => const Builderspage());
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: const Text("Stream builder "),
+                  onTap: () {
+                    Get.to(() =>  streambuilderr());
                   },
                 ),
               ),
